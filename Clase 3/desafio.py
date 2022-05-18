@@ -22,6 +22,6 @@ for candidato in votosS:
 
 def ordenar():
     votosDOr = sorted(votosD.items(), key=itemgetter(1), reverse = True )
-    print( votosDOr[0][0])
+    print( votosDOr[0][0] )
 
 ordenar()
