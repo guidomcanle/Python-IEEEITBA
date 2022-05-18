@@ -8,10 +8,9 @@ cantVotos = int (input ())
 votos = list()
 votosD = {}
 
-while cantVotos != 0:
+for i in range(cantVotos):
     agregar = input()
     votos.append(agregar)
-    cantVotos -= 1
 
 votosS = set(votos)
 
