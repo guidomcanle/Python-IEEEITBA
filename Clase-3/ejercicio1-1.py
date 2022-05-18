@@ -24,13 +24,9 @@ def trad():
     for codigo in listMorse:
         for letraE in codigoMorse:
             if codigoMorse[letraE] == codigo:
-                # codigo = codigo.replace(codigo, letraE)
                 texto.append(letraE)
     textoStr = "".join(texto)
     print(textoMorse)
     print(textoStr)
 
-
 trad()
-
-# print(trad(textoMorse))
