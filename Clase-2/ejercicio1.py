@@ -9,10 +9,9 @@ def aFarenheit(c):
     f = c * 9/5 + 32
     return f
 
-print(round(aFarenheit(c), 2), "°F")
-
 def aKelvin(c):
     k = c + 273.15 
     return k
 
+print(round(aFarenheit(c), 2), "°F")
 print(round(aKelvin(c), 2), "°K")

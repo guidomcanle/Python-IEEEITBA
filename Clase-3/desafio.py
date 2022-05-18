@@ -8,19 +8,23 @@ cantVotos = int (input ())
 votos = list()
 votosD = {}
 
-for i in range(cantVotos):
-    agregar = input()
-    votos.append(agregar)
+def sumarVotos():
+    for i in range(cantVotos):
+        agregar = input()
+        votos.append(agregar)
 
-votosS = set(votos)
+def contarVotos():
+    votosS = set(votos)
+    for candidato in votosS:
+        for voto in votos:
+            if candidato == voto:
+                votosD[candidato] = votosD.get(voto, 0) + 1
 
-for candidato in votosS:
-    for voto in votos:
-        if candidato == voto:
-            votosD[candidato] = votosD.get(voto, 0) + 1
-
-def ordenar():
+def sacarGanador():
     votosDOr = sorted(votosD.items(), key=itemgetter(1), reverse = True )
     print( votosDOr[0][0] )
 
-ordenar()
+
+sumarVotos()
+contarVotos()
+sacarGanador()
